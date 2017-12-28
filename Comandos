@@ -1,0 +1,21 @@
+npm install bootstrap@4.0.0-beta.2 --save
+npm install jquery --save
+npm install tether --save
+npm install popper.js --save
+
+ng g c topo --spec=false
+ng g c home --spec=false
+ng g c rodape --spec=false
+
+npm install -g json-server
+json-server --watch banco-de-dados.json
+
+npm install --save intl
+
+npm uninstall bootstrap //comando para desinstalar um pacote
+
+npm uninstall -g @angular/cli
+
+npm install -g @angular/cli
+
+ng buil -- prod //criar o build de produção
