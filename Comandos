@@ -18,4 +18,8 @@ npm uninstall -g @angular/cli
 
 npm install -g @angular/cli
 
-ng buil -- prod //criar o build de produção
+ng build --prod //criar o build de produção
+
+ng build --prod --aot=false //Compilação just-in-time
+
+ng build --prod --aot=true //Compilação ahead-of-time
