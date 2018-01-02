@@ -23,3 +23,5 @@ ng build --prod //criar o build de produção
 ng build --prod --aot=false //Compilação just-in-time
 
 ng build --prod --aot=true //Compilação ahead-of-time
+
+https://my-json-server.typicode.com/
