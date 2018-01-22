@@ -9,16 +9,17 @@ import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
 import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 
 export const ROUTES: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'restaurantes', component: RestaurantesComponent },
-    { path: 'diversao', component: DiversaoComponent },
-    { path: 'oferta', component: HomeComponent },
-    { path: 'oferta/:id', component: OfertaComponent, 
+    { pathMatch: 'full', path: '', component: HomeComponent },
+    { pathMatch: 'full', path: 'restaurantes', component: RestaurantesComponent },
+    { pathMatch: 'full', path: 'diversao', component: DiversaoComponent },
+    { pathMatch: 'full', path: 'oferta', component: HomeComponent },
+    {
+        pathMatch: 'full', path: 'oferta/:id', component: OfertaComponent,
         children: [//children significa que terá rotas filhas dentro da pagina
-            { path: '', component: ComoUsarComponent },
-            { path: 'como-usar', component: ComoUsarComponent },
-            { path: 'onde-fica', component: OndeFicaComponent }
-        ] 
+            { pathMatch: 'full', path: '', component: ComoUsarComponent },
+            { pathMatch: 'full', path: 'como-usar', component: ComoUsarComponent },
+            { pathMatch: 'full', path: 'onde-fica', component: OndeFicaComponent }
+        ]
     },
-    { path: 'ordem-compra', component: OrdemCompraComponent}
+    { pathMatch: 'full', path: 'ordem-compra', component: OrdemCompraComponent }
 ] 
